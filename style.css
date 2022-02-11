@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.topboard{
+    height: 60px;
+    background: rgb(80, 236, 32);
+}
+.mainarea{
+    height:550px;
+    background: black;
+}
+.startscreen, .result {
+    display: flex;
+    width: 300px;
+    position: relative;
+    top: 210px;
+    left: 557px;
+    color: white;
+    cursor: pointer;
+    background: linear-gradient(blue, red);
+    height: 100px;
+    border-radius: 30px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    font-size: 24px;
+}
+.startscreen:hover{
+    color: black;
+}
+.helicoptor{
+    position: absolute;
+    left: 0;
+    width: 135px;
+    height: 100px;
+}
+.wing{
+    width: 120px;
+    height: 20px;
+    position: relative;
+    top: 31px;
+    left: -2px;
+    animation: wingrotate 0.1s linear infinite;
+}
+@keyframes wingrotate{
+    0%{
+        transform: rotateY(0deg);  
+     }
+     50%{
+         transform: rotateY(360deg);  
+     }
+     100%{
+         transform: rotateY(0deg);  
+    }
+}
+.helicoptorimg{
+    width: 120px;
+    height: 80px;
+}
+
+.remainarea{    
+    height:32px;
+    background: rgb(80, 236, 32);
+}
+.block{
+    width: 100px;
+    height: 350px;
+    background: brown;
+    position: absolute;
+    animation: blockmove 5s infinite linear;
+}
+@keyframes blockmove{
+    0%{
+        right: 0;
+    }
+    100%{
+        right: 1400px;
+    }
+}
+.result{
+        display: none;
+}
+.result #btn {
+    color: black;
+    background-color: white;
+    padding: 7px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+}
+#btn:hover {
+    color: white;
+    background-color: black;
+}
